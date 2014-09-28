@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="contact">
+    <name>Contacts and Leads Capture</name>
+    <author>Source Creativity</author>
+    <creationDate>February 2009</creationDate>
+    <copyright>(C) 2009 Source Creativity. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>info@sourcecreativity.com</authorEmail>
+    <authorUrl>http://www.sourcecreativity.com</authorUrl>
+    <version>1.1</version>
+    <description> This is a new version of Leads Capture plugin, it allows you to capture data into Leads or Contacts in SugarCRM when a contact information are submitted through Joomla! contact form. Now you can capture the Joomla contact message into a predefined (description by default) or custom field in SugarCRM Leads or Contacts. It's very easy to setup, to use and it's free, enjoy !  </description>
+    <files>
+        <filename plugin="contactsandleadscapture">contactsandleadscapture.php</filename>
+        <filename plugin="contactsandleadscapture">lc_includes/nusoap.php</filename>
+		<filename plugin="contactsandleadscapture">lc_includes/mysoap.php</filename>
+    </files>
+	
+		<params>
+		<param name="activate" type="radio" default="1" label="Activate Capture" description="Activate Capture">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		
+				
+		<param name="mode" type="list" default="Leads" label="Capture as" description="Capture data as SugarCRM Leads or Contacts">
+			<option value="Leads">Leads</option>
+			<option value="Contacts">Contacts</option>
+		</param>
+		
+		<param name="msgfield" type="text" size="20" default="description" label="Associate the message to the Sugar field" description="Associate the message to SugarCRM custom field for exemple myfield_c, by default it is description" />
+		
+		<param name="@spacer" type="spacer" default="" label="coucou" description="" />
+		
+	<param name="sugarcrmlivesite" type="text" size="40" default="http://www.example.com/sugarcrm" label="SugarCRM Live Site" description="The location of the SugarCRM" />
+		<param name="username" type="text" size="20" default="" label="SugarCRM username" description="" />
+		<param name="password" type="password" size="20" default="" label="SugarCRM password" description="" />
+    </params>		
+	
+</install>
